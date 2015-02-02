@@ -1,3 +1,5 @@
+#pragma once
+
 // tilelib: very simple tile library to create grid based games, by Wouter van Oortmerssen.
 // use SDL, OpenGL, and code from sfxr & picopng
 
