@@ -12,7 +12,7 @@
 #include "Character.h"
 
 //I use DVORAK, change to false when turning in for QWERTY
-#define KEYBOARDLAYOUT false
+#define KEYBOARDLAYOUT true
 
 using namespace std;
 
@@ -26,17 +26,15 @@ public:
 	bool quitGame();
 
 	void drawMap();
-	int getTileAtLoc(Point p);
 	void fillBox(Point pStart, Point pEnd);
-	void moveScreen();
+	int floodFill(Point loc, int zone, int size);
 private:
 	int xScreenRes;
 	int yScreenRes;
 	int xRes;
 	int yRes;
 	int worldSize;
-	vector<Tile> map;
-	vector<Tile> screen;
+	vector<vector<Tile>> map;
 	Point screenOrientation;
 	Point startPoint;
 	Tile mainChar;
