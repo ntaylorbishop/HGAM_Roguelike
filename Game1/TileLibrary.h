@@ -8,9 +8,10 @@
 class TileLibrary
 {
 public:
-	TileLibrary(char *windowtitle, int width, int height, char *name, int tilesz = 32, int numtex = 1);
+	TileLibrary();
 	~TileLibrary();
 
+	void init(char *windowtitle, int width, int height, char *name, int tilesz = 32, int numtex = 1);
 	void framestart();
 	void rendertile(int tile, Point loc);
 

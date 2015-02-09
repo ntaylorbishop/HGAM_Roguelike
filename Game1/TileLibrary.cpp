@@ -1,13 +1,15 @@
 #include "TileLibrary.h"
 
 
-TileLibrary::TileLibrary(char *windowtitle, int width, int height, char *name, int tilesz, int numtex) {
-	tl_init(windowtitle, width, height, name, tilesz, numtex);
+TileLibrary::TileLibrary() {
 }
 TileLibrary::~TileLibrary() {
 	tl_shutdown();
 }
 
+void TileLibrary::init(char *windowtitle, int width, int height, char *name, int tilesz, int numtex) {
+	tl_init(windowtitle, width, height, name, tilesz, numtex);
+}
 void TileLibrary::framestart() {
 	tl_framestart(0);
 }
@@ -41,7 +43,7 @@ bool TileLibrary::keydown(char *key) {
 	return tl_keydown(key);
 }
 bool TileLibrary::keywentdown(char *key) {
-	return keywentdown(key);
+	return tl_keywentdown(key);
 }
 
 bool TileLibrary::buttondown(int button) {

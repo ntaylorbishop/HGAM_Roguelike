@@ -6,7 +6,7 @@
 #include <vector>
 #include <string>
 
-#include "tilelib.h"
+#include "TileLibrary.h"
 #include "Tile.h"
 #include "Point.h"
 #include "Character.h"
@@ -38,5 +38,6 @@ private:
 	Point screenOrientation;
 	Point startPoint;
 	Tile mainChar;
+	TileLibrary lib;
 };
 
