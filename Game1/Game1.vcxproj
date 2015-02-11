@@ -68,6 +68,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Actor.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Character.cpp" />
@@ -77,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\base_materials\include\tilelib.h" />
+    <ClInclude Include="Actor.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="Character.h" />

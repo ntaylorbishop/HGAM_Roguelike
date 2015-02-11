@@ -28,6 +28,16 @@ public:
 	void drawMap();
 	void fillBox(Point pStart, Point pEnd);
 	int floodFill(Point loc, int zone, int size);
+
+
+	template<typename Func>
+	void loop_world(int size, Func f) {
+		for (int x = 0; x < size; x++) {
+			for (int y = 0; y < size; y++) {
+				f(Point(x, y));
+			}
+		}
+	}
 private:
 	int xScreenRes;
 	int yScreenRes;

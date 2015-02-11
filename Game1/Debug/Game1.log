@@ -1,5 +1,17 @@
-﻿Build started 2/9/2015 3:17:57 PM.
+﻿Build started 2/11/2015 11:24:20 AM.
+     1>Project "C:\gamedev\Game1\Game1\Game1.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\gamedev\Game1\Debug\Game1.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\gamedev\Game1\\base_materials\lib tilelibd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\gamedev\Game1\Debug\Game1.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\gamedev\Game1\Debug\Game1.lib" /MACHINE:X86 Debug\Actor.obj
+         Debug\Point.obj
+         Debug\Tile.obj
+         Debug\Character.obj
+         Debug\GameEngine.obj
+         Debug\main.obj
+         Debug\TileLibrary.obj
+            Creating library C:\gamedev\Game1\Debug\Game1.lib and object C:\gamedev\Game1\Debug\Game1.exp
+         Game1.vcxproj -> C:\gamedev\Game1\Debug\Game1.exe
+     1>Done Building Project "C:\gamedev\Game1\Game1\Game1.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.67
+Time Elapsed 00:00:01.66

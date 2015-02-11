@@ -21,13 +21,18 @@ GameEngine::GameEngine(char* title, int xScreenRes, int yScreenRes, char* tiles,
 	}
 
 	//Generate the map boundaries
-	for (int x = 0; x < worldSize; x++) {
+	loop_world(worldSize, [this](Point p) {
+		Tile c(p, 2, 0x103, 0);
+		map[p.x()].push_back(c);
+
+	});
+	/*for (int x = 0; x < worldSize; x++) {
 		for (int y = 0; y < worldSize; y++) {
 			Point p(x, y);
 			Tile c(p, 2, 0x103, 0);
 			map.at(x).push_back(c);
 		}
-	}
+	}*/
 
 	//Generate the random rooms
 	for (int i = 0; i < rand() % 130 + 100; i++) {
