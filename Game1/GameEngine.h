@@ -5,11 +5,14 @@
 
 #include <vector>
 #include <string>
+#include <algorithm>
 
 #include "TileLibrary.h"
-#include "Tile.h"
+#include "Cell.h"
 #include "Point.h"
-#include "Character.h"
+#include "ActorDef.h"
+#include "Actor.h"
+#include "Dice.h"
 
 //I use DVORAK, change to false when turning in for QWERTY
 #define KEYBOARDLAYOUT true
@@ -29,11 +32,12 @@ public:
 	void fillBox(Point pStart, Point pEnd);
 	int floodFill(Point loc, int zone, int size);
 
+	bool moveableCell(Point p);
 
 	template<typename Func>
-	void loop_world(int size, Func f) {
-		for (int x = 0; x < size; x++) {
-			for (int y = 0; y < size; y++) {
+	void loop_world(Point start, Point end, Func f) {
+		for (int x = start.x(); x < end.x(); x++) {
+			for (int y = start.y(); y < end.y(); y++) {
 				f(Point(x, y));
 			}
 		}
@@ -44,10 +48,12 @@ private:
 	int xRes;
 	int yRes;
 	int worldSize;
-	vector<vector<Tile>> map;
+	vector<vector<Cell>> map;
+	vector<Point> playableMap;
+	vector<Actor*> monsters;
 	Point screenOrientation;
 	Point startPoint;
-	Tile mainChar;
+	Cell mainChar;
 	TileLibrary lib;
 };
 

@@ -5,13 +5,12 @@
 #include "tilelib.h"
 #include "Point.h"
 
-class TileLibrary
-{
+class TileLibrary {
 public:
 	TileLibrary();
-	~TileLibrary();
 
 	void init(char *windowtitle, int width, int height, char *name, int tilesz = 32, int numtex = 1);
+	void shutdown();
 	void framestart();
 	void rendertile(int tile, Point loc);
 

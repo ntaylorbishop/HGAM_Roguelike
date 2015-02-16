@@ -1,27 +1,28 @@
 #pragma once
 
 #include "Point.h"
+#include "ActorDef.h"
 
-class Actor
-{
+class Actor {
 public:
-	Actor();
+	//STRUCTORS
+	Actor(ActorDef def, Point loc);
 	~Actor();
 
+	//GETTERS SETTERS
 	int getHP();
-	int getMaxHP();
-	int getATK();
-	int getDEF();
 	Point getLoc();
-	
+	ActorDef getActorDef();
 	void setHP(int hp);
-	void setDEF(int def);
-	void changeLoc(Point p);
+	void setLoc(Point p);
+	void setActorDef(ActorDef def);
+
+	//OTHER
+	bool instanceof(Actor a);
 private:
 	int hp;
-	int maxhp;
-	int atk;
-	int def;
 	Point loc;
+
+	ActorDef def;
 };
 

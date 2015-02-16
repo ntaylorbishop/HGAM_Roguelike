@@ -69,9 +69,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="ActorDef.cpp" />
+    <ClCompile Include="Dice.cpp" />
     <ClCompile Include="Point.cpp" />
-    <ClCompile Include="Tile.cpp" />
-    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Cell.cpp" />
     <ClCompile Include="GameEngine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="TileLibrary.cpp" />
@@ -79,9 +80,10 @@
   <ItemGroup>
     <ClInclude Include="..\base_materials\include\tilelib.h" />
     <ClInclude Include="Actor.h" />
+    <ClInclude Include="ActorDef.h" />
+    <ClInclude Include="Dice.h" />
     <ClInclude Include="Point.h" />
-    <ClInclude Include="Tile.h" />
-    <ClInclude Include="Character.h" />
+    <ClInclude Include="Cell.h" />
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="TileLibrary.h" />

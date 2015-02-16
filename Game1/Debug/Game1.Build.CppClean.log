@@ -1,9 +1,10 @@
 c:\gamedev\game1\game1\debug\vc120.pdb
 c:\gamedev\game1\game1\debug\vc120.idb
 c:\gamedev\game1\game1\debug\actor.obj
+c:\gamedev\game1\game1\debug\actordef.obj
+c:\gamedev\game1\game1\debug\dice.obj
 c:\gamedev\game1\game1\debug\point.obj
-c:\gamedev\game1\game1\debug\tile.obj
-c:\gamedev\game1\game1\debug\character.obj
+c:\gamedev\game1\game1\debug\cell.obj
 c:\gamedev\game1\game1\debug\gameengine.obj
 c:\gamedev\game1\game1\debug\main.obj
 c:\gamedev\game1\game1\debug\tilelibrary.obj

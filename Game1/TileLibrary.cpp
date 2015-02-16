@@ -3,12 +3,12 @@
 
 TileLibrary::TileLibrary() {
 }
-TileLibrary::~TileLibrary() {
-	tl_shutdown();
-}
 
 void TileLibrary::init(char *windowtitle, int width, int height, char *name, int tilesz, int numtex) {
 	tl_init(windowtitle, width, height, name, tilesz, numtex);
+}
+void TileLibrary::shutdown() {
+	tl_shutdown();
 }
 void TileLibrary::framestart() {
 	tl_framestart(0);

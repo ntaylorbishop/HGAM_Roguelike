@@ -3,8 +3,7 @@
 #include "stdafx.h"
 #include <Windows.h>
 
-#include "Character.h"
-#include "Tile.h"
+#include "Cell.h"
 #include "Point.h"
 #include "GameEngine.h"
 
@@ -14,9 +13,6 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 	GameEngine engine("roguelike", 800, 608, "tiles", 32, 3, 64); //25 x 19 tiles
 
-	while (!engine.quitGame()) {
+	while (!engine.quitGame())
 		engine.run();
-	}
-
-
 }

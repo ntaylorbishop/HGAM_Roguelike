@@ -5,8 +5,7 @@
  * Description: Holds an x,y point (in tile orientation)
  *
  */
-class Point
-{
+class Point {
 public:
 	//Structors
 	Point();
@@ -28,17 +27,15 @@ public:
 			return *this;
 		}
 	}
-	Point& operator+(const Point &rhs) {
-		if (this == &rhs)
-			return *this;
-		else {
-			xCoord += rhs.xCoord;
-			yCoord += rhs.yCoord;
-			return *this;
-		}
+	friend Point operator+(const Point &p1, const Point &p2);
+	friend Point operator-(const Point &p1, const Point &p2);
+
+	Point& operator/(int n) {
+		xCoord = xCoord / n;
+		yCoord = yCoord / n;
+		return *this;
 	}
 private:
 	int xCoord;
 	int yCoord;
 };
-

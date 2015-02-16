@@ -1,35 +1,38 @@
 #include "Actor.h"
 
-
-Actor::Actor()
-{
+//STRUCTORS
+Actor::Actor(ActorDef def, Point loc) {
+	this->def = def;
+	this->hp = def.getMaxHP();
+	this->loc = loc;
 }
-Actor::~Actor()
-{
+Actor::~Actor() {
 }
 
+//GETTERS SETTERS
 int Actor::getHP() {
 	return hp;
-}
-int Actor::getMaxHP() {
-	return maxhp;
-}
-int Actor::getATK() {
-	return atk;
-}
-int Actor::getDEF() {
-	return def;
 }
 Point Actor::getLoc() {
 	return loc;
 }
-
+ActorDef Actor::getActorDef() {
+	return def;
+}
 void Actor::setHP(int hp) {
 	this->hp = hp;
 }
-void Actor::setDEF(int def) {
+void Actor::setLoc(Point p) {
+	this->loc = loc;
+}
+void Actor::setActorDef(ActorDef def) {
 	this->def = def;
 }
-void Actor::changeLoc(Point p) {
-	this->loc = p;
+
+//OTHER
+bool Actor::instanceof(Actor a) {
+	if (this->def == a.getActorDef())
+		return true;
+	else
+		return false;
 }

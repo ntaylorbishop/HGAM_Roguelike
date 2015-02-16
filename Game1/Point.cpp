@@ -28,3 +28,10 @@ void Point::setCoords(int x, int y) {
 	this->xCoord = x;
 	this->yCoord = y;
 }
+
+Point operator+(const Point &p1, const Point &p2) {
+	return Point(p1.xCoord + p2.xCoord, p1.yCoord + p2.yCoord);
+}
+Point operator-(const Point &p1, const Point &p2) {
+	return Point(p1.xCoord - p2.xCoord, p1.yCoord - p2.yCoord);
+}
