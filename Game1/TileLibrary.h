@@ -1,9 +1,13 @@
 #pragma once
 
+#include <Windows.h>
 #include <stddef.h>
+#include <string>
 
 #include "tilelib.h"
 #include "Point.h"
+
+using namespace std;
 
 class TileLibrary {
 public:
@@ -29,6 +33,8 @@ public:
 
 	Point mouseLoc();
 
-	void play(char *sfs_filename);
+	void play(string filename);
+private:
+	string fPath = "../base_materials/sound/";
 };
 

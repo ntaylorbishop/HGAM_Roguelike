@@ -71,6 +71,11 @@
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="ActorDef.cpp" />
     <ClCompile Include="Dice.cpp" />
+    <ClCompile Include="Hero.cpp" />
+    <ClCompile Include="InventoryLog.cpp" />
+    <ClCompile Include="Pickup.cpp" />
+    <ClCompile Include="PickupDef.cpp" />
+    <ClCompile Include="MessageLog.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Cell.cpp" />
     <ClCompile Include="GameEngine.cpp" />
@@ -82,11 +87,20 @@
     <ClInclude Include="Actor.h" />
     <ClInclude Include="ActorDef.h" />
     <ClInclude Include="Dice.h" />
+    <ClInclude Include="Hero.h" />
+    <ClInclude Include="InventoryLog.h" />
+    <ClInclude Include="Pickup.h" />
+    <ClInclude Include="PickupDef.h" />
+    <ClInclude Include="MessageLog.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Cell.h" />
     <ClInclude Include="GameEngine.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="TileLibrary.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="curr_issues.txt" />
+    <Text Include="dump.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

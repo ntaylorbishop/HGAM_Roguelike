@@ -1,0 +1,11 @@
+	/*DEBUGGING WITH MOUSE KEYS
+	if (lib.buttonwentdown(1)) {
+		Point mouseWorld = screenOrientation + (lib.mouseLoc() - (lib.res() / 2));
+		Cell& c = map[mouseWorld.x()][mouseWorld.y()];
+		if (mouseWorld > Point(0, 0) && mouseWorld < Point(worldSize, worldSize)) {
+			string str = mouseWorld.to_str() + "ZONE: " + to_string(c.getZone()) + "TYPE: " + to_string(c.getCellType()) + "\n\n";
+			OutputDebugString(str.c_str());
+		}
+		else
+			OutputDebugString("MOUSE OUT OF BOUNDS\n");
+	}*/

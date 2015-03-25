@@ -29,6 +29,10 @@ void Point::setCoords(int x, int y) {
 	this->yCoord = y;
 }
 
+string Point::to_str() {
+	return "(" + to_string(xCoord) + ", " + to_string(yCoord) + ")\n";
+}
+
 Point operator+(const Point &p1, const Point &p2) {
 	return Point(p1.xCoord + p2.xCoord, p1.yCoord + p2.yCoord);
 }

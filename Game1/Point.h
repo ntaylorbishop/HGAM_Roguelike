@@ -1,5 +1,9 @@
 #pragma once
 
+#include <string>
+
+using namespace std;
+
 /*
  * Name: Point
  * Description: Holds an x,y point (in tile orientation)
@@ -18,6 +22,9 @@ public:
 	void sety(int y);
 	void setCoords(int x, int y);
 
+	string to_str();
+
+	//ARITHMETIC OPERATORS
 	Point& operator=(const Point &rhs) {
 		if (this == &rhs)
 			return *this;
@@ -35,6 +42,27 @@ public:
 		yCoord = yCoord / n;
 		return *this;
 	}
+
+	//CONDITIONAL OPERATORS
+	bool operator<(const Point &other) const {
+		if (this->xCoord < other.xCoord && this->yCoord < other.yCoord)
+			return true;
+		else
+			return false;
+	}
+	bool operator>(const Point &other) const {
+		return !(*this < other);
+	}
+	bool operator==(const Point &other) const {
+		if (this->xCoord == other.xCoord && this->yCoord == other.yCoord)
+			return true;
+		else
+			return false;
+	}
+	bool operator!=(const Point &other) const {
+		return !(*this == other);
+	}
+
 private:
 	int xCoord;
 	int yCoord;

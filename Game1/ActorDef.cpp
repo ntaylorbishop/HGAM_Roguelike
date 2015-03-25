@@ -17,7 +17,7 @@ ActorDef::ActorDef(Dice atk, int def, int maxhp, int tile, string desc) {
 }
 
 //GETTERS SETTERS
-Dice ActorDef::getATK() {
+Dice ActorDef::actorATK() {
 	return atk;
 }
 int ActorDef::getDEF() {

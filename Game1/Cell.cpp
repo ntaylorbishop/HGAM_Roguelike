@@ -1,5 +1,6 @@
-#include "Cell.h"
+#include <Windows.h>
 
+#include "Cell.h"
 
 //Structors
 Cell::Cell() {
@@ -31,12 +32,18 @@ int Cell::getZone() {
 Actor* Cell::getActor() {
 	return a;
 }
+Pickup* Cell::getPickup() {
+	return p;
+}
 
 void Cell::setLoc(Point p) {
 	loc = p;
 }
 void Cell::setTileType(int type) {
-	this->type = type;
+	if (type < 0 || type > 4)
+		OutputDebugString("TILE TYPE IS NOT SET PROPERLY");
+	else
+		this->type = type;
 }
 void Cell::setTile(int tile) {
 	this->tile = tile;
@@ -46,4 +53,7 @@ void Cell::setZone(int zone) {
 }
 void Cell::setActor(Actor* a) {
 	this->a = a;
+}
+void Cell::setPickup(Pickup* p) {
+	this->p = p;
 }

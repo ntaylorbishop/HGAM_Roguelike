@@ -59,6 +59,16 @@ Point TileLibrary::mouseLoc() {
 	return p;
 }
 
-void TileLibrary::play(char *sfs_filename) {
-	tl_play(sfs_filename);
+void TileLibrary::play(string filename) {
+	int which;
+	if (filename == "OnHit") {
+		which = rand() % 4 + 1;
+		filename += to_string(which);
+	}
+	else if (filename == "OnDeath") {
+		which = rand() % 3 + 1;
+		filename += to_string(which);
+	}
+	string str = fPath + filename.c_str() + ".sfs";
+	tl_play(const_cast<char*>(str.c_str()));
 }

@@ -14,3 +14,19 @@ int Dice::rollDice() {
 		sum += rand() % sides + 1;
 	return sum;
 }
+string Dice::to_str() {
+	return to_string(rolls) + ", " + to_string(rolls * sides);
+}
+
+int Dice::getSides() {
+	return sides;
+}
+int Dice::getRolls() {
+	return rolls;
+}
+void Dice::setSides(int sides) {
+	this->sides = sides;
+}
+void Dice::setRolls(int rolls) {
+	this->rolls = rolls;
+}

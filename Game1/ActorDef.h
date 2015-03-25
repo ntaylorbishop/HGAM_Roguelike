@@ -12,7 +12,7 @@ public:
 	ActorDef(Dice atk, int def, int maxhp, int tile, string desc);
 
 	//GETTERS SETTERS
-	Dice getATK();
+	Dice actorATK();
 	int getDEF();
 	int getMaxHP();
 	int getTile();
